@@ -1,3 +1,6 @@
+'''Left:   A
+   Ricght: B
+   Stop:   Both'''
 from microbit import *
 import radio
 
