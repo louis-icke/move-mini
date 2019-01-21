@@ -1,3 +1,6 @@
+'''3rd Servo Up:   A
+   3rd Servo Down: B
+   Stop:           Both'''
 from microbit import *
 import radio
 
