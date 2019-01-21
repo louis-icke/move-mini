@@ -1,3 +1,6 @@
+'''Forwards:  A
+   Backwards: B
+   Stop:      Both'''
 from microbit import *
 import radio
 
