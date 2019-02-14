@@ -43,3 +43,5 @@ while True:
             pin0.write_analog(180)
         elif value == 3:
             pin0.write_analog(1)
+        else:
+            pin0.write_analog(0)
