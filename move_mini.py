@@ -25,6 +25,7 @@ pin0.set_analog_period(20)
 pin1.set_analog_period(20)
 pin2.set_analog_period(20)
 radio.on()
+radio.config(channel=1)
 while True:
     value = radio.receive()
     if value != None:

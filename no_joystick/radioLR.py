@@ -1,11 +1,9 @@
-'''Left:   A
-   Ricght: B
-   Stop:   Both'''
+
 from microbit import *
 import radio
 
 radio.on()
-radio.reset()
+radio.config(channel=1)
 
 while True:
     if button_a.is_pressed() and button_b.is_pressed():

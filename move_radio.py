@@ -20,7 +20,7 @@ def button():
         return 0
 
 radio.on()
-radio.reset()
+radio.config(channel=1)
 while True:
     buttonNum = button()
     joyx = 0
