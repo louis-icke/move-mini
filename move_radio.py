@@ -23,17 +23,21 @@ def button():
 radio.on()
 radio.config(channel=channel)
 while True:
-    buttonNum = button()
+    buttonNum = str(button())
+    if buttonNum == None:
+        buttonNum = 0
     joyx = 0
     joyy = 0
     joyx = pin0.read_analog()
     joyy = pin1.read_analog()
     if joyx < 400:
-        buttonNum = 10
+        buttonNum += '1'
     elif joyx > 600:
-        buttonNum = 11
+        buttonNum += '2'
     elif joyy < 400:
-        buttonNum = 12
+        buttonNum += '3'
     elif joyy > 600:
-        buttonNum = 13
-    radio.send(str(buttonNum))
+        buttonNum += '4'
+    else:
+        buttonNum += '0'
+    radio.send(buttonNum)

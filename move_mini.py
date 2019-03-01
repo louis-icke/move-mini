@@ -21,6 +21,7 @@ def back():
 def stop():
     pin1.write_analog(0)
     pin2.write_analog(0)
+    
 
 pin0.set_analog_period(20)
 pin1.set_analog_period(20)
@@ -30,20 +31,22 @@ radio.config(channel=channel)
 while True:
     value = radio.receive()
     if value != None:
-        value = int(value)
-        if value == 10:
+        joy = int(value[1])
+        but = int(value[0])
+        if joy == 1:
             left()
-        elif value == 11:
+        elif joy == 2:
             right()
-        elif value == 12:
+        elif joy == 3:
             back()
-        elif value == 13:
+        elif joy == 4:
             forward()
-        elif value == 5:
+        else:
             stop()
-        elif value == 1:
+            
+        if but == 1:
             pin0.write_analog(180)
-        elif value == 3:
+        elif but == 3:
             pin0.write_analog(1)
         else:
             pin0.write_analog(0)
