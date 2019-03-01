@@ -1,9 +1,9 @@
-
 from microbit import *
 import radio
+channel = 1
 
 radio.on()
-radio.config(channel=1)
+radio.config(channel=channel)
 
 while True:
     if button_a.is_pressed() and button_b.is_pressed():

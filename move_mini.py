@@ -1,5 +1,6 @@
 from microbit import *
 import radio
+channel = 1
 
 def left():
     pin1.write_analog(1)
@@ -25,7 +26,7 @@ pin0.set_analog_period(20)
 pin1.set_analog_period(20)
 pin2.set_analog_period(20)
 radio.on()
-radio.config(channel=1)
+radio.config(channel=channel)
 while True:
     value = radio.receive()
     if value != None:

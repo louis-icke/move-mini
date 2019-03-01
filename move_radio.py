@@ -1,5 +1,6 @@
 from microbit import *
 import radio
+channel = 1
 
 def button():
     buttonNum = 0
@@ -20,7 +21,7 @@ def button():
         return 0
 
 radio.on()
-radio.config(channel=1)
+radio.config(channel=channel)
 while True:
     buttonNum = button()
     joyx = 0
